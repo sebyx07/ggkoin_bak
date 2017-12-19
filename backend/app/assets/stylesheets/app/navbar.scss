@@ -1,0 +1,21 @@
+.left-navbar, .right-navbar, .main-content{
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  padding: 0.5em;
+}
+
+.left-navbar{
+  left: 0;
+  width: 20em;
+}
+
+.right-navbar{
+  right: 0;
+  width: 25em;
+}
+
+.main-content{
+  left: 20em;
+  right: 25em;
+}

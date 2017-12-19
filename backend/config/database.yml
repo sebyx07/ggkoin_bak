@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 1234
+  host: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ggkoin_development
+test:
+  <<: *default
+  database: ggkoin_test
+
+production:
+  <<: *default
+  database: ggkoin_production
+  host: 127.0.0.1
+  username: ggkoin

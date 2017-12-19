@@ -1,0 +1,63 @@
+source 'https://rubygems.org'
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+gem 'rails', '~> 5.1.4'
+gem 'pg'
+gem 'puma'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'turbolinks'
+gem 'jbuilder'
+gem 'bcrypt'
+
+
+group :development, :test do
+  gem 'byebug'
+  gem 'selenium-webdriver'
+end
+
+group :development do
+  gem 'web-console'
+  gem 'listen'
+  gem 'spring'
+  gem 'spring-watcher-listen'
+  gem 'guard-rspec'
+  gem 'spring-commands-rspec'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+end
+
+group :test do
+  gem 'mocha'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+end
+
+# admin
+gem 'rails_admin'
+gem 'rails_admin-i18n'
+gem 'rails-i18n'
+
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
+  gem 'capistrano-rvm'
+end
+
+gem 'poltergeist'
+gem 'capybara'
+
+
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'jquery-rails'
+gem 'draper'
